@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Pesquisa</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Formulário de Pesquisa</h1>
+
+    <p id="description">Obrigado por participar</p>
+
+    <form id="survey-form">
+      <fieldset>
+        <label for="user-name" id="name-label"
+          >Nome
+          <input
+            type="text"
+            name="user-name"
+            id="name"
+            required
+            placeholder="Insira seu nome..."
+        /></label>
+
+        <label for="user-email" id="email-label"
+          >Email
+          <input
+            type="email"
+            name="user-email"
+            id="user-email"
+            required
+            placeholder="Insira seu email..."
+        /></label>
+
+        <label for="user-age" id="number-label"
+          >Idade
+          <input
+            type="number"
+            name="user-age"
+            id="user-age"
+            required
+            min="18"
+            max="120"
+            placeholder="Insira sua idade..."
+        /></label>
+
+        <label for="user-gender" id="gender">
+          Genêro
+          <div>
+            <input
+              type="radio"
+              name="gender"
+              value="masculino"
+              class="inline"
+            />
+            Masculino
+          </div>
+          <div>
+            <input type="radio" name="gender" value="feminino" class="inline" />
+            Feminino
+          </div>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <div>
+          <label for="user-level" id="user-level"
+            >Nível de senioridade
+            <select name="user-level" id="dropdown">
+              <option value="">Selecione</option>
+              <option value="1">Estudante</option>
+              <option value="2">Júnior</option>
+              <option value="3">Pleno</option>
+              <option value="4">Sênior</option>
+            </select>
+          </label>
+        </div>
+
+        <label for="opinion" id="opinion">
+          Qual a maior dificuldade em conseguir um emprego na sua opnião?
+          <div><input type="checkbox" value="1" /> Falta de vagas</div>
+          <div><input type="checkbox" value="2" /> Exigências das empresas</div>
+          <div>
+            <input type="checkbox" value="3" /> competitividade no mercado
+          </div>
+          <div>
+            <input type="checkbox" value="4" /> Todos acima e outros mais...
+          </div>
+          <div><input type="checkbox" value="5" /> Outro...</div>
+        </label>
+
+        <label for="bio" id="bio">
+          Qual a sua ligação com a tecnologia:
+          <textarea
+            name="bio"
+            id="user-bio"
+            placeholder="Digite aqui..."
+          ></textarea>
+        </label>
+      </fieldset>
+
+      <label for="terms" id="terms">
+        <input
+          id="terms-and-conditions"
+          type="checkbox"
+          required
+          name="terms"
+        />
+        I accept the
+        <a href="#" target="_blank">terms and conditions</a>
+      </label>
+      <input id="submmit" type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
